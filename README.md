@@ -1,2 +1,2 @@
 # sisop2
-SISOP 2: Trabalho práticos
+Trabalhos práticos da disciplina Sistemas Operacionais 2
