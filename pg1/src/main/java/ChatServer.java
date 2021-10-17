@@ -13,14 +13,14 @@ public class ChatServer{
     @OnOpen
     public void openSocket(Session session){
         sessions.add(session);
-        LOGGER.log(Level.ALL, "Connection open:" + session.getId());
+        LOGGER.log(Level.INFO, "Connection open:" + session.getId());
 
     }
 
     @OnClose
     public void closeSocket(Session session){
         sessions.remove(session);
-        LOGGER.log(Level.ALL, "Connection closed:" + session.getId());
+        LOGGER.log(Level.INFO, "Connection closed:" + session.getId());
     }
 
     @OnMessage
@@ -29,7 +29,7 @@ public class ChatServer{
             try {
                 session.getBasicRemote().sendText(message);
             } catch (IOException e) {
-                LOGGER.log(Level.ALL, "Error: " + e.getMessage());
+                LOGGER.log(Level.INFO, "Error: " + e.getMessage());
             }
         }
     }
