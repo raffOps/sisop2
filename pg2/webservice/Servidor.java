@@ -1,3 +1,4 @@
+package webservice;
 import java.io.IOException;
 import java.net.URI;
 import javax.ws.rs.core.UriBuilder;
